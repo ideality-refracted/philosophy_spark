@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from './components/Button';
 import { InsightCard } from './components/InsightCard';
+import { IdealityBranding } from './components/IdealityBranding';
+import { IdealityLogo } from './components/IdealityLogo';
 import { generateSparks } from './services/geminiService';
 import { SparkResponse } from './types';
 
@@ -38,16 +40,28 @@ function App() {
       {/* Header */}
       <header className="py-6 border-b border-slate-800 bg-spark-dark/80 backdrop-blur-md sticky top-0 z-10">
         <div className="max-w-2xl mx-auto px-6 flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-spark-gold rounded-lg flex items-center justify-center shadow-[0_0_10px_rgba(255,215,0,0.5)]">
-              <svg className="w-5 h-5 text-spark-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-              </svg>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 bg-spark-gold rounded-lg flex items-center justify-center shadow-[0_0_10px_rgba(255,215,0,0.5)]">
+                <svg className="w-5 h-5 text-spark-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h1 className="text-2xl font-serif font-bold tracking-tight text-white leading-none">
+                Philosophy Spark
+              </h1>
             </div>
-            <h1 className="text-2xl font-serif font-bold tracking-tight text-white">
-              Philosophy Spark
-            </h1>
+            
+            {/* Created by Ideality Refracted Tag */}
+            <div className="flex items-center gap-2 ml-11 mt-1 animate-fade-in opacity-80 hover:opacity-100 transition-opacity">
+               <span className="text-[10px] text-slate-500 font-sans tracking-wide uppercase">by</span>
+               <div className="flex items-center gap-1.5 group cursor-pointer">
+                 <IdealityLogo className="w-3 h-3 text-slate-500 group-hover:text-spark-gold transition-colors" />
+                 <span className="text-[10px] text-slate-400 group-hover:text-spark-gold transition-colors font-sans tracking-wider font-medium">Ideality Refracted</span>
+               </div>
+            </div>
           </div>
+          
           <nav>
             <a href="#" onClick={(e) => { e.preventDefault(); setInsights(null); setInput(''); }} className="text-sm font-medium text-slate-400 hover:text-spark-gold transition-colors">
               New Spark
@@ -128,7 +142,7 @@ function App() {
 
         {/* Results Feed */}
         {insights && (
-          <div className="w-full space-y-6 pb-20">
+          <div className="w-full space-y-6">
             <div className="flex items-center gap-4 mb-6">
                <div className="h-px bg-slate-700 flex-grow"></div>
                <span className="text-xs font-bold tracking-widest text-slate-500 uppercase">Philosophical Perspectives</span>
@@ -148,6 +162,11 @@ function App() {
           </div>
         )}
       </main>
+
+      {/* Footer / Branding */}
+      <footer className="w-full py-12 mt-12 border-t border-slate-800/30 bg-gradient-to-b from-transparent to-slate-900/50">
+        <IdealityBranding />
+      </footer>
     </div>
   );
 }
