@@ -1,3 +1,5 @@
+Struggling with a moral dilemma? Feeling overwhelmed by modern life? Curious about the nature of reality? The app sparks the philosophical ideas and guides you to to dive deeper.
+
 ## Access
 
 Public URL: https://philosophy-spark-139431326628.us-west1.run.app/
