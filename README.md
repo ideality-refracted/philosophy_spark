@@ -1,17 +1,12 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+## Access
 
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
+Public URL: https://philosophy-spark-139431326628.us-west1.run.app/
 
 View your app in AI Studio: https://ai.studio/apps/drive/1xWXk22FL953RJE7wS_ZyUpolgcJaA-aZ
 
 ## Run Locally
 
 **Prerequisites:**  Node.js
-
 
 1. Install dependencies:
    `npm install`
